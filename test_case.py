@@ -11,14 +11,14 @@ from  email.header import Header
 from email.mime.multipart import MIMEMultipart
 import os
 
-#·¢ËÍÓÊÏä·şÎñÆ÷
+#å‘é€é‚®ç®±æœåŠ¡å™¨
 smtpserver='webmaster@zloving.com'
-#·¢ËÍÓÊÏäÓÃ»§/ÃÜÂë
+#å‘é€é‚®ç®±ç”¨æˆ·/å¯†ç 
 user='webmaster@zloving.com'
-password='DJOslNK35zMdlOpy'
-#·¢ËÍÓÊÏä
+password='******'
+#å‘é€é‚®ç®±
 sender='xiongxiongjiayou1@163.com'
-#½ÓÊÕÓÊÏä
+#æ¥æ”¶é‚®ç®±
 receiver='2275028513@qq.com'
 
 def send_mail(file_new):
@@ -43,7 +43,7 @@ class niaoyun(unittest.TestCase):
 		time.sleep(2)
 	
 	def test_niaoyun(self):
-		u'''ÕâÊÇÒ»¸ö¶ÔÓÚÄñÔÆµÄµÇÂ¼'''
+		u'''è¿™æ˜¯ä¸€ä¸ªå¯¹äºé¸Ÿäº‘çš„ç™»å½•'''
 		logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(filename)s[line:%(lineno)d]%(levelname)s%(message)s',\
 			                 datefmt='%a,%d %b %Y %H:%M:%S',filename='myapp.log',filemode='w')
 		dirver=self.dirver
@@ -67,7 +67,7 @@ if __name__=="__main__":
 	testunit=unittest.TestSuite()
 	testunit.addTest(niaoyun('test_niaoyun'))
 	fp=open('D:\\test\\result.html','wb')
-	runner=HTMLTestRunner(stream=fp,title=u'ÄñÔÆ²âÊÔ±¨¸æ',description=u'ÓÃÀıÖ´ĞĞÇé¿ö:')
+	runner=HTMLTestRunner(stream=fp,title=u'**æµ‹è¯•æŠ¥å‘Š',description=u'ç”¨ä¾‹æ‰§è¡Œæƒ…å†µ:')
 	runner.run(testunit)
 	file_new='D:\\test\\result.html'
 	send_mail(file_new)
