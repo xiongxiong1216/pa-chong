@@ -26,7 +26,7 @@ msgboby=weathermail('shenzhen')
 # msgBoby=['Hello!','This is my first python mail']
 msg='\r\n\r\n'.join(['\r\n'.join(msghead),'\r\n'.join(msgboby)])
 server.set_debuglevel(1)
-server.login(Fromeaddress,'199312x')
+server.login(Fromeaddress,'******')
 server.sendmail(Fromeaddress,Toaddress,msg)
 print u'邮件发送成功'
 server.quit()
